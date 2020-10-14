@@ -22,7 +22,7 @@ import org.amshove.kluent.shouldNotBeNull
 import org.junit.Test
 import java.time.LocalDate
 
-
+//this class contains testing done in a standard wy - run by jUnit5 - In my opinion this is more user friendly than spec
 class ApplicationTest {
 
     val mapper = jacksonObjectMapper()

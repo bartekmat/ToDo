@@ -2,7 +2,6 @@ package com.rocksolidknowledge.todolist.restapi
 
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import com.rocksolidknowledge.todolist.shared.Importance
 import com.rocksolidknowledge.todolist.shared.TodoItem
 import io.ktor.config.MapApplicationConfig
@@ -52,12 +51,11 @@ object GetTodosSpec : Spek({
 
         engine.application.module() // our main module function
         val mapper = jacksonObjectMapper()
-            .registerModule(JavaTimeModule())
+            .registerModule(JavaTimeModule()) //it is important to set this beacuse we have dates in our object
 
         with(engine) {
 
             it("should be OK to get the list of todos") {
-
                 handleRequest(HttpMethod.Get, "/api/todos").apply {
                     response.status().`should be`(HttpStatusCode.OK)
                 }
@@ -68,82 +66,45 @@ object GetTodosSpec : Spek({
              *
              * Not sure which is idiomatic (yet)
              */
-            it("should get the todos") {
-
+            it("should get todos"){
                 handleRequest(HttpMethod.Get, "/api/todos").apply {
                     response.content
                         .shouldNotBeNull()
                         .shouldContain("database")
                 }
-
-                handleRequest(HttpMethod.Get, "/api/todos").let {
-                    it.response.content
-                        .shouldNotBeNull()
-                        .shouldContain("database")
-                }
-
-                with(handleRequest(HttpMethod.Get, "/api/todos")) {
-                    response.content
-                        .shouldNotBeNull()
-                        .shouldContain("database")
-                }
             }
-
-            it("should get the todos") {
-
-                with(handleRequest(HttpMethod.Get, "/api/todos")) {
-                    response.content
-                        .shouldNotBeNull()
-                        .shouldContain("database")
-                }
-            }
-
-            it("should get the corrrect number of todos") {
-
-                with(handleRequest(HttpMethod.Get, "/api/todos")) {
-                    val todos = mapper.readValue<List<TodoItem>>(response.content!!)
-                    todos.size.shouldBe(2)
-                }
-            }
-
-            it("should create the todos") {
-
-                with(handleRequest(HttpMethod.Post, "/api/todos"){
+            it("should create a todo") {
+                with(handleRequest(HttpMethod.Post, "/api/todos") {
                     addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
                     setBody(mapper.writeValueAsString(todo))
-                }) {
+                }){
                     response.status().`should be`(HttpStatusCode.Created)
                 }
             }
-
-            it("should update the todos") {
-                with(handleRequest(HttpMethod.Put, "/api/todos/1"){
+            it("should update the todos"){
+                with(handleRequest(HttpMethod.Put, "/api/todos/1") {
                     addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
                     setBody(mapper.writeValueAsString(todo))
                 }) {
                     response.status().`should be`(HttpStatusCode.NoContent)
                 }
             }
-
-            it("should delete the todos") {
-                with(handleRequest(HttpMethod.Delete, "/api/todos/1")) {
+            it("should delete the todo"){
+                handleRequest(HttpMethod.Delete, "/api/todos/1").apply {
                     response.status().`should be`(HttpStatusCode.NoContent)
                 }
             }
-
-            it("should get the todo if the id is set") {
-
-                with(handleRequest(HttpMethod.Get, "/api/todos/1")) {
+            it("should get the existing todo"){
+                handleRequest(HttpMethod.Get, "/api/todos/1").apply {
                     response.content
                         .shouldNotBeNull()
                         .shouldContain("database")
+                        .shouldContain("Kevin")
                 }
             }
-
-            it("should return an error if the id is invalid") {
-
-                with(handleRequest(HttpMethod.Get, "/api/todos/3")) {
-                    response.status().shouldEqual(HttpStatusCode.NotFound)
+            it("should return error for non existing id get request"){
+                handleRequest(HttpMethod.Get, "/api/todos/55").apply {
+                    response.status().`should be`(HttpStatusCode.NotFound)
                 }
             }
         }
