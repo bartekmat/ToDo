@@ -2,12 +2,10 @@ package com.rocksolidknowledge.todolist.restapi
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.*
-import io.ktor.features.ContentNegotiation
-import io.ktor.features.StatusPages
-import io.ktor.http.ContentType
-import io.ktor.http.HttpStatusCode
-import io.ktor.jackson.jackson
-import io.ktor.response.respondText
+import io.ktor.features.*
+import io.ktor.http.*
+import io.ktor.jackson.*
+import io.ktor.response.*
 import io.ktor.routing.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.cio.EngineMain.main(args)
@@ -47,3 +45,5 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 }
+
+
