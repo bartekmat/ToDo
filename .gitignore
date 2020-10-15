@@ -1,5 +1,15 @@
 .gradle/
-.idea/
+.idea/codeStyles
+.idea/libraries
+.idea/modules
+.idea/.name
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/kotlinc.xml
+.idea/kotlinScripting.xml
+.idea/misc.xml
 target/
 out/
 build/
