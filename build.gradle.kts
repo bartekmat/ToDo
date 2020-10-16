@@ -54,12 +54,29 @@ subprojects {
     version = "1.0"
 }
 
+
 project(":todolist-shared") {
 
 }
 project(":todolist-restapi") {
     dependencies {
         implementation(project(":todolist-shared"))
+        implementation(project(":dataaccess-service"))
+        implementation(project(":repository"))
     }
+}
+project(":todolist-web") {
+    dependencies {
+        implementation(project(":todolist-shared"))
+    }
+}
+project(":dataaccess-service") {
+    dependencies {
+        implementation(project(":todolist-shared"))
+        implementation(project(":repository"))
+    }
+}
+project(":repository") {
+
 }
 

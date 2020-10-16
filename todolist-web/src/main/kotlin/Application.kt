@@ -46,6 +46,7 @@ fun Application.module() {
         if (isDev) trace {
             application.log.trace(it.buildText())
         }
+        todos()
         staticResources()
     }
 }
