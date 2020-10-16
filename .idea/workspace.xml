@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ae191a-a4a3-41b3-acde-baa25d17d743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dataaccess-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataaccess-service/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/src/main/kotlin/TodoListRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/src/main/kotlin/TodoListRepositorySql.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/viewmodels/TodoVM.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/resources/templates/base.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/resources/templates/footer.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/resources/templates/header.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/TodoApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/TodoApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/TodosUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/TodosUI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,10 +276,10 @@
     <list>
       <item itemvalue="Gradle.SpecTests" />
       <item itemvalue="Gradle.ToDo [run]" />
+      <item itemvalue="Gradle.ToDo [clean]" />
       <item itemvalue="JUnit.JUnitTests" />
       <item itemvalue="Kotlin.Rest-Api" />
       <item itemvalue="Kotlin.Web" />
-      <item itemvalue="Gradle.ToDo [clean]" />
     </list>
     <recent_temporary>
       <list>
@@ -318,11 +303,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -431,10 +411,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" width="672" height="677" key="run.anything.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602630235089" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602887573605">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602891179920">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602887573605" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602891179920" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

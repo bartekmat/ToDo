@@ -49,7 +49,7 @@ object GetTodosSpec : Spek({
         }
 
 
-        engine.application.module() // our main module function
+        engine.application.moduleWithDependencies() // our main module function
         val mapper = jacksonObjectMapper()
             .registerModule(JavaTimeModule()) //it is important to set this beacuse we have dates in our object
 
