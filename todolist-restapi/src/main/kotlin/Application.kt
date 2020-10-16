@@ -1,13 +1,14 @@
 package com.rocksolidknowledge.todolist.restapi
 
 import com.fasterxml.jackson.databind.SerializationFeature
+import com.knowledgespike.todolist.TodoListRepositorySql
+import com.rocksolidknowledge.dataaccess.shared.TodoService
+import com.rocksolidknowledge.dataaccess.shared.TodoServiceImpl
 import io.ktor.application.*
-import io.ktor.features.ContentNegotiation
-import io.ktor.features.StatusPages
-import io.ktor.http.ContentType
-import io.ktor.http.HttpStatusCode
-import io.ktor.jackson.jackson
-import io.ktor.response.respondText
+import io.ktor.features.*
+import io.ktor.http.*
+import io.ktor.jackson.*
+import io.ktor.response.*
 import io.ktor.routing.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.cio.EngineMain.main(args)
@@ -18,10 +19,14 @@ val TodoContentV1 = ContentType("application", "vnd.todoapi.v1+json")
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
+    val todoService = TodoServiceImpl(TodoListRepositorySql())
+    moduleWithDependencies(todoService)
+}
 
+fun Application.moduleWithDependencies(todoService: TodoService) {
 
     install(Routing) {
-        todoApi()
+        todoApi(todoService)
     }
 
     install(StatusPages) {
@@ -47,3 +52,5 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 }
+
+

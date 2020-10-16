@@ -1,32 +1,30 @@
 package com.rocksolidknowledge.todolist.restapi
 
-import com.rocksolidknowledge.todolist.shared.Importance
+import com.rocksolidknowledge.dataaccess.shared.TodoService
 import com.rocksolidknowledge.todolist.shared.TodoItem
-import io.ktor.application.call
-import io.ktor.http.HttpStatusCode
-import io.ktor.request.receive
-import io.ktor.response.respond
+import io.ktor.application.*
+import io.ktor.http.*
+import io.ktor.request.*
+import io.ktor.response.*
 import io.ktor.routing.*
-import java.time.LocalDate
 
-
-fun Routing.todoApi() {
+fun Routing.todoApi(todoService: TodoService) {
     route("/api") {
 
         accept(TodoContentV1) {
             get("/todos") {
-                call.respond(todos)
+                call.respond(todoService.getAll())
             }
         }
 
         get("/todos") {
-            call.respond(todos)
+            call.respond(todoService.getAll())
         }
 
         get("todos/{id}") {
             val id = call.parameters["id"]!!
             try {
-                val todo = todos[id.toInt()]
+                val todo = todoService.getTodo(id.toInt())
                 call.respond(todo)
             } catch (e: Throwable) {
                 call.respond(HttpStatusCode.NotFound)
@@ -34,70 +32,22 @@ fun Routing.todoApi() {
         }
 
         post("todos") {
-            val headers = call.request.headers
             val todo = call.receive<TodoItem>()
-            val newTodo =
-                TodoItem(todos.size + 1, todo.title, todo.details, todo.assignedTo, todo.dueDate, todo.importance)
-            todos = todos + newTodo
-            call.respond(HttpStatusCode.Created, todos)
+            todoService.create(todo)
+            call.respond(HttpStatusCode.Created)
         }
 
         put("todos/{id}") {
-            val id = call.parameters["id"]
-            if (id == null) {
-                call.respond(HttpStatusCode.BadRequest)
-                return@put
-            }
-
-            val foundItem = todos.getOrNull(id.toInt())
-            if (foundItem == null) {
-                call.respond(HttpStatusCode.NotFound)
-                return@put
-            }
-
+            val id = call.parameters["id"]?: throw IllegalArgumentException("Missing id")
             val todo = call.receive<TodoItem>()
-
-            todos = todos.filter { it.id != todo.id }
-            todos = todos + todo
-
+            todoService.update(id.toInt(), todo)
             call.respond(HttpStatusCode.NoContent)
         }
 
         delete("todos/{id}") {
-            val id = call.parameters["id"]
-            if (id == null) {
-                call.respond(HttpStatusCode.BadRequest)
-                return@delete
-            }
-
-            val foundItem = todos.getOrNull(id.toInt())
-            if (foundItem == null) {
-                call.respond(HttpStatusCode.NotFound)
-                return@delete
-            }
-
-            todos = todos.filter { it.id != id.toInt() }
+            val id = call.parameters["id"]?: throw IllegalArgumentException("Missing id")
+            todoService.delete(id.toInt())
             call.respond(HttpStatusCode.NoContent)
         }
     }
 }
-
-val todo1 = TodoItem(
-    1,
-    "Add RestAPI",
-    "Add data support",
-    "Me",
-    LocalDate.of(2018, 12, 18),
-    Importance.HIGH
-)
-
-val todo2 = TodoItem(
-    2,
-    "Add database processing",
-    "Add a service to get the data",
-    "Me",
-    LocalDate.of(2018, 12, 18),
-    Importance.HIGH
-)
-
-var todos = listOf(todo1, todo2)
