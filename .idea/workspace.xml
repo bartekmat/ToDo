@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ae191a-a4a3-41b3-acde-baa25d17d743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist-web/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/TodosUI.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist-web/src/main/resources/templates/todos.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-web/application.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/resources/application.dev.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +89,10 @@
       <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-restapi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-web" />
       <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-web\src\main\resources" />
       <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-restapi" />
       <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-restapi\src\main\resources" />
-      <recent name="C:\Users\Asus\Documents\GithubProjects\Pluralsight\ToDo\todolist-web" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -104,7 +100,14 @@
       <command value="gradle clean build test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JUnitTests">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="JetRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.Rest-Api">
     <configuration default="true" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <module name="com.knowledgespike.todolist-restapi" />
       <method v="2">
@@ -172,7 +175,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.rocksolidknowledge.todolist.restapi.ApplicationKt" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,7 +188,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.rocksolidknowledge.todolist.web.ApplicationKt" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,6 +254,28 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -298,10 +323,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="679" y="-901" key="#Rest-Api/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602629995169" />
-    <state x="420" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602799406829">
+    <state x="420" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602881306326">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="420" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799406829" />
+    <state x="420" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602881306326" />
     <state x="690" y="-783" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1602793379201">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -314,46 +339,47 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="740" y="-804" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602796776871" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602799366203">
+    <state width="1293" height="146" key="GridCell.Tab.0.bottom" timestamp="1602882353002">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799366203" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602799366202">
+    <state width="1293" height="146" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602882353002" />
+    <state width="1293" height="146" key="GridCell.Tab.0.center" timestamp="1602882353002">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799366202" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602799366202">
+    <state width="1293" height="146" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602882353002" />
+    <state width="1293" height="146" key="GridCell.Tab.0.left" timestamp="1602882353002">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799366202" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602799366202">
+    <state width="1293" height="146" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602882353002" />
+    <state width="1293" height="146" key="GridCell.Tab.0.right" timestamp="1602882353002">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799366202" />
+    <state width="1293" height="146" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602882353002" />
     <state x="440" y="-985" key="SettingsEditor" timestamp="1602799361314">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="440" y="-985" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602799361314" />
-    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog" timestamp="1602786382836">
+    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog" timestamp="1602834477629">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602786382836" />
+    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602834477629" />
     <state x="656" y="-962" width="607" height="804" key="find.popup" timestamp="1602797850305">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="656" y="-962" width="607" height="804" key="find.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602797850305" />
-    <state x="889" y="-883" key="new project wizard" timestamp="1602787958629">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="889" y="197" key="new project wizard" timestamp="1602834525377">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="889" y="-883" key="new project wizard/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602787958629" />
+    <state x="889" y="197" key="new project wizard/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1602834525377" />
     <state x="616" y="-299" width="672" height="677" key="run.anything.popup" timestamp="1602630235089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" width="672" height="677" key="run.anything.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602630235089" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602797419758">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602881905972">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602797419758" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602881905972" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
