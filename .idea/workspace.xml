@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="09ae191a-a4a3-41b3-acde-baa25d17d743" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.SpecTests">
+  <component name="RunManager" selected="Kotlin.Rest-Api">
     <configuration default="true" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <module name="com.knowledgespike.todolist-restapi" />
       <method v="2">
@@ -300,7 +303,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -372,22 +380,22 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="740" y="-804" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602796776871" />
-    <state width="1921" height="288" key="GridCell.Tab.0.bottom" timestamp="1602943121476">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom" timestamp="1602948232412">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602943121476" />
-    <state width="1921" height="288" key="GridCell.Tab.0.center" timestamp="1602943121476">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232412" />
+    <state width="1324" height="323" key="GridCell.Tab.0.center" timestamp="1602948232411">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602943121476" />
-    <state width="1921" height="288" key="GridCell.Tab.0.left" timestamp="1602943121476">
+    <state width="1324" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232411" />
+    <state width="1324" height="323" key="GridCell.Tab.0.left" timestamp="1602948232411">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602943121476" />
-    <state width="1921" height="288" key="GridCell.Tab.0.right" timestamp="1602943121476">
+    <state width="1324" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232411" />
+    <state width="1324" height="323" key="GridCell.Tab.0.right" timestamp="1602948232412">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602943121476" />
+    <state width="1324" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232412" />
     <state x="440" y="-985" width="1169" height="849" key="SettingsEditor" timestamp="1602887981667">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

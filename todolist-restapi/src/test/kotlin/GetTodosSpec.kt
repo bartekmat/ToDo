@@ -5,20 +5,15 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.rocksolidknowledge.dataaccess.shared.TodoService
 import com.rocksolidknowledge.todolist.shared.Importance
 import com.rocksolidknowledge.todolist.shared.TodoItem
-import io.ktor.config.MapApplicationConfig
-import io.ktor.http.ContentType
-import io.ktor.http.HttpHeaders
-import io.ktor.http.HttpMethod
-import io.ktor.http.HttpStatusCode
-import io.ktor.server.testing.TestApplicationEngine
-import io.ktor.server.testing.createTestEnvironment
-import io.ktor.server.testing.handleRequest
-import io.ktor.server.testing.setBody
-import io.mockk.clearAllMocks
+import io.ktor.config.*
+import io.ktor.http.*
+import io.ktor.server.testing.*
 import io.mockk.clearMocks
 import io.mockk.every
 import io.mockk.mockk
-import org.amshove.kluent.*
+import org.amshove.kluent.`should be`
+import org.amshove.kluent.shouldContain
+import org.amshove.kluent.shouldNotBeNull
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 import java.time.LocalDate
@@ -76,7 +71,7 @@ object GetTodosSpec : Spek({
              *
              * Not sure which is idiomatic (yet)
              */
-            it("should get todos"){
+            it("should get todos") {
                 every { mockTodoService.getAll() } returns listOf(todo, todo)
                 handleRequest(HttpMethod.Get, "/api/todos").apply {
                     response.content
@@ -89,11 +84,11 @@ object GetTodosSpec : Spek({
                 with(handleRequest(HttpMethod.Post, "/api/todos") {
                     addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
                     setBody(mapper.writeValueAsString(todo))
-                }){
+                }) {
                     response.status().`should be`(HttpStatusCode.Created)
                 }
             }
-            it("should update the todos"){
+            it("should update the todos") {
                 every { mockTodoService.update(1, todo) } returns true
                 with(handleRequest(HttpMethod.Put, "/api/todos/1") {
                     addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
@@ -102,13 +97,13 @@ object GetTodosSpec : Spek({
                     response.status().`should be`(HttpStatusCode.NoContent)
                 }
             }
-            it("should delete the todo"){
+            it("should delete the todo") {
                 every { mockTodoService.delete(1) } returns true
                 handleRequest(HttpMethod.Delete, "/api/todos/1").apply {
                     response.status().`should be`(HttpStatusCode.NoContent)
                 }
             }
-            it("should get the existing todo"){
+            it("should get the existing todo") {
                 every { mockTodoService.getTodo(1) } returns todo
                 handleRequest(HttpMethod.Get, "/api/todos/1").apply {
                     response.content
@@ -117,7 +112,7 @@ object GetTodosSpec : Spek({
                         .shouldContain("Kevin")
                 }
             }
-            it("should return error for non existing id get request"){
+            it("should return error for non existing id get request") {
                 every { mockTodoService.getTodo(55) } throws Exception()
                 handleRequest(HttpMethod.Get, "/api/todos/55").apply {
                     response.status().`should be`(HttpStatusCode.NotFound)
