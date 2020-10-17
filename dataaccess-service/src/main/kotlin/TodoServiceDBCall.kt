@@ -25,7 +25,7 @@ val todo2 = TodoItem(
 
 val todos = listOf(todo1, todo2)
 
-class TodoServiceImpl(val todoListRepository: TodoListRepository) : TodoService {
+class TodoServiceDBCall(val todoListRepository: TodoListRepository) : TodoService {
     override fun update(id: Int, todo: TodoItem): Boolean {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -38,11 +38,11 @@ class TodoServiceImpl(val todoListRepository: TodoListRepository) : TodoService 
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getAll(): List<TodoItem> {
+    override suspend fun getAll(): List<TodoItem> {
         return todos
     }
 
-    override fun getTodo(id: Int): TodoItem {
+    override suspend fun getTodo(id: Int): TodoItem {
         return todos[id]
     }
 

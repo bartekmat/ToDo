@@ -68,6 +68,8 @@ project(":todolist-restapi") {
 project(":todolist-web") {
     dependencies {
         implementation(project(":todolist-shared"))
+        implementation(project(":dataaccess-service"))
+        implementation(project(":repository"))
     }
 }
 project(":dataaccess-service") {

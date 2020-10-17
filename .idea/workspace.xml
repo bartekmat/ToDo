@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ae191a-a4a3-41b3-acde-baa25d17d743" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceAPICall.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/ApplicationTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/test/kotlin/GetTodosSpec.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/TodosUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/TodosUI.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +41,9 @@
         <task path="$PROJECT_DIR$/todolist-web">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/dataaccess-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -46,13 +54,41 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="todolist" type="f1a62948:ProjectNode" />
+                <item name="dataaccess-service" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -190,6 +226,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="dataaccess-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dataaccess-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="JUnitTests" type="JUnit" factoryName="JUnit">
       <module name="com.rocksolidknowledge.todolist.todolist-restapi.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -281,9 +336,11 @@
       <item itemvalue="JUnit.JUnitTests" />
       <item itemvalue="Kotlin.Rest-Api" />
       <item itemvalue="Kotlin.Web" />
+      <item itemvalue="Gradle.dataaccess-service [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.dataaccess-service [build]" />
         <item itemvalue="Gradle.SpecTests" />
         <item itemvalue="Gradle.ToDo [clean]" />
         <item itemvalue="Gradle.ToDo [run]" />
@@ -304,11 +361,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Kotlin" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -380,22 +432,22 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="740" y="-804" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602796776871" />
-    <state width="1324" height="323" key="GridCell.Tab.0.bottom" timestamp="1602948232412">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom" timestamp="1602958907903">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232412" />
-    <state width="1324" height="323" key="GridCell.Tab.0.center" timestamp="1602948232411">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602958907903" />
+    <state width="1324" height="323" key="GridCell.Tab.0.center" timestamp="1602958907903">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232411" />
-    <state width="1324" height="323" key="GridCell.Tab.0.left" timestamp="1602948232411">
+    <state width="1324" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602958907903" />
+    <state width="1324" height="323" key="GridCell.Tab.0.left" timestamp="1602958907903">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232411" />
-    <state width="1324" height="323" key="GridCell.Tab.0.right" timestamp="1602948232412">
+    <state width="1324" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602958907903" />
+    <state width="1324" height="323" key="GridCell.Tab.0.right" timestamp="1602958907903">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602948232412" />
+    <state width="1324" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602958907903" />
     <state x="440" y="-985" width="1169" height="849" key="SettingsEditor" timestamp="1602887981667">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -417,10 +469,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" width="672" height="677" key="run.anything.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602630235089" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602891179920">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602958286923">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602891179920" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602958286923" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

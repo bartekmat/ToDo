@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.SerializationFeature
 import com.knowledgespike.todolist.TodoListRepository
 import com.knowledgespike.todolist.TodoListRepositorySql
 import com.rocksolidknowledge.dataaccess.shared.TodoService
-import com.rocksolidknowledge.dataaccess.shared.TodoServiceImpl
+import com.rocksolidknowledge.dataaccess.shared.TodoServiceDBCall
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
@@ -21,7 +21,7 @@ import org.koin.standalone.StandAloneContext
     Here below KOIN configuration for dependency injection
 */
 val todoAppModule = module {
-    single<TodoService> { TodoServiceImpl(get()) } //look here get() takes repository instance declared one line below
+    single<TodoService> { TodoServiceDBCall(get()) } //look here get() takes repository instance declared one line below
     single<TodoListRepository> { TodoListRepositorySql() }
 }
 

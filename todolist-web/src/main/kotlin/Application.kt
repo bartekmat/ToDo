@@ -1,6 +1,8 @@
 package com.rocksolidknowledge.todolist.web
 
 import com.github.mustachejava.DefaultMustacheFactory
+import com.rocksolidknowledge.dataaccess.shared.TodoService
+import com.rocksolidknowledge.dataaccess.shared.TodoServiceAPICall
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.application.*
@@ -9,13 +11,25 @@ import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.mustache.Mustache
+import org.koin.dsl.module.module
+import org.koin.ktor.ext.inject
+import org.koin.standalone.StandAloneContext
+
+val todoAppModule = module {
+    single <TodoService> { TodoServiceAPICall() }
+}
 
 fun main (args: Array<String>) {
+    StandAloneContext.startKoin(listOf(todoAppModule))
     embeddedServer(Netty, commandLineEnvironment(args)).start()
 }
 
 @Suppress("unused")
 fun Application.module() {
+    val todoService: TodoService by inject()
+    moduleWithDependencies(todoService)
+}
+fun Application.moduleWithDependencies(todoService: TodoService) {
     install(StatusPages){
         when {
             isDev -> {
@@ -46,7 +60,7 @@ fun Application.module() {
         if (isDev) trace {
             application.log.trace(it.buildText())
         }
-        todos()
+        todos(todoService)
         staticResources()
     }
 }
