@@ -13,7 +13,7 @@ class TodoServiceAPICall : TodoService {
         }
     }
 
-    val apiEndpoint = "http://localhost:8081/api/todos"
+    val apiEndpoint = "http://localhost:8082/api/todos"
 
     override fun update(id: Int, todo: TodoItem): Boolean {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

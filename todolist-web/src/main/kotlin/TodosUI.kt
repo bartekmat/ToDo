@@ -8,12 +8,13 @@ import io.ktor.response.*
 import io.ktor.routing.*
 
 fun Routing.todos(todoService: TodoService) {
+    //authenticate(oauthAuthentication) {
     get("/todos") {
-
         val todos = todoService.getAll()
         val todoVm = TodoVM(todos)
         call.respond(
             MustacheContent("todos.hbs", mapOf("todos" to todoVm))
         )
     }
+    // }
 }
