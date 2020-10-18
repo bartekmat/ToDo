@@ -1,11 +1,14 @@
 package com.rocksolidknowledge.todolist.restapi
 
+import com.auth0.jwk.JwkProviderBuilder
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.knowledgespike.todolist.TodoListRepository
 import com.knowledgespike.todolist.TodoListRepositorySql
 import com.rocksolidknowledge.dataaccess.shared.TodoService
 import com.rocksolidknowledge.dataaccess.shared.TodoServiceDBCall
 import io.ktor.application.*
+import io.ktor.auth.*
+import io.ktor.auth.jwt.*
 import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.jackson.*
@@ -16,6 +19,8 @@ import io.ktor.server.engine.*
 import org.koin.dsl.module.module
 import org.koin.ktor.ext.inject
 import org.koin.standalone.StandAloneContext
+import java.net.URL
+import java.util.concurrent.TimeUnit
 
 /*
     Here below KOIN configuration for dependency injection
@@ -41,6 +46,35 @@ fun Application.module(testing: Boolean = false) {
 }
 
 fun Application.moduleWithDependencies(todoService: TodoService) {
+
+    val jwkIssuer = environment.config.property("jwt.jwkIssuer").getString()
+    val jwksUrl: URL = URL(environment.config.property("jwt.jwksUrl").getString())
+    val jwkRealm = environment.config.property("jwt.jwkRealm").getString()
+    val jwkProvider = JwkProviderBuilder(jwksUrl)
+        .cached(10,24, TimeUnit.HOURS)
+        .rateLimited(10,1,TimeUnit.MINUTES)
+        .build()
+    val audience = "todolistAPI"
+
+    install(Authentication){
+        jwt("jwt") {
+            verifier(jwkProvider, jwkIssuer)
+            var cred : JWTCredential
+            var principal : JWTPrincipal
+            validate { credentials ->
+                cred = credentials
+                log.debug("Credentials audience: ${credentials.payload.audience}")
+                log.debug("audience: $audience")
+
+                if (credentials.payload.audience.contains(audience)){
+                    principal = JWTPrincipal(credentials.payload)
+                    principal
+                } else {
+                    null
+                }
+            }
+        }
+    }
 
     install(Routing) {
         todoApi(todoService)
