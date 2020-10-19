@@ -20,7 +20,7 @@ import org.amshove.kluent.shouldContain
 import org.amshove.kluent.shouldNotBeNull
 import org.junit.Test
 import java.time.LocalDate
-
+// big issue - this is not really unit test, it is hard to mock called services - for rest api tests it is better to use library as spec :)
 //this class contains testing done in a standard wy - run by jUnit5 - In my opinion this is more user friendly than spec
 class ApplicationTest {
 
