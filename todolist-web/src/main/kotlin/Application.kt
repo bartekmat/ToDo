@@ -3,6 +3,8 @@ package com.rocksolidknowledge.todolist.web
 import com.github.mustachejava.DefaultMustacheFactory
 import com.rocksolidknowledge.dataaccess.shared.TodoService
 import com.rocksolidknowledge.dataaccess.shared.TodoServiceAPICall
+import com.rocksolidknowledge.todolist.IOAuthClient
+import com.rocksolidknowledge.todolist.OAuthClient
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.application.*
@@ -21,7 +23,8 @@ import org.koin.ktor.ext.inject
 import org.koin.standalone.StandAloneContext
 
 val todoAppModule = module {
-    single <TodoService> { TodoServiceAPICall() }
+    single <TodoService> { TodoServiceAPICall(get()) }
+    single <IOAuthClient> { OAuthClient() }
 }
 
 val logonProvider = OAuthServerSettings.OAuth2ServerSettings(

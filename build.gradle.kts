@@ -70,12 +70,14 @@ project(":todolist-web") {
         implementation(project(":todolist-shared"))
         implementation(project(":dataaccess-service"))
         implementation(project(":repository"))
+        implementation(project(":oauth-client"))
     }
 }
 project(":dataaccess-service") {
     dependencies {
         implementation(project(":todolist-shared"))
         implementation(project(":repository"))
+        implementation(project(":oauth-client"))
     }
 }
 project(":repository") {

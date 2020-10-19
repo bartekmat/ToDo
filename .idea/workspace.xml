@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ae191a-a4a3-41b3-acde-baa25d17d743" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/oauth-client/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth-client/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth-client/src/main/kotlin/oauthClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/kotlin/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-restapi/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceAPICall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dataaccess-service/src/main/kotlin/TodoServiceAPICall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/todolist-web/src/main/kotlin/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,10 +319,10 @@
       <item itemvalue="Gradle.ToDo [run]" />
       <item itemvalue="Gradle.ToDo [clean]" />
       <item itemvalue="Gradle.dataaccess-service [build]" />
+      <item itemvalue="Gradle.ToDo:todolist-web [build]" />
       <item itemvalue="JUnit.JUnitTests" />
       <item itemvalue="Kotlin.Rest-Api" />
       <item itemvalue="Kotlin.Web" />
-      <item itemvalue="Gradle.ToDo:todolist-web [build]" />
     </list>
     <recent_temporary>
       <list>
@@ -413,30 +419,30 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="740" y="-804" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602796776871" />
-    <state width="1324" height="323" key="GridCell.Tab.0.bottom" timestamp="1603035519802">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom" timestamp="1603038884217">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603035519802" />
-    <state width="1324" height="323" key="GridCell.Tab.0.center" timestamp="1603035519801">
+    <state width="1324" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038884217" />
+    <state width="1324" height="323" key="GridCell.Tab.0.center" timestamp="1603038884217">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603035519801" />
-    <state width="1324" height="323" key="GridCell.Tab.0.left" timestamp="1603035519801">
+    <state width="1324" height="323" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038884217" />
+    <state width="1324" height="323" key="GridCell.Tab.0.left" timestamp="1603038884217">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603035519801" />
-    <state width="1324" height="323" key="GridCell.Tab.0.right" timestamp="1603035519802">
+    <state width="1324" height="323" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038884217" />
+    <state width="1324" height="323" key="GridCell.Tab.0.right" timestamp="1603038884217">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1324" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603035519802" />
-    <state x="440" y="-985" width="1169" height="849" key="SettingsEditor" timestamp="1602887981667">
+    <state width="1324" height="323" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038884217" />
+    <state x="440" y="-985" width="1169" height="849" key="SettingsEditor" timestamp="1603038779238">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="440" y="-985" width="1169" height="849" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602887981667" />
-    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog" timestamp="1602966735905">
+    <state x="440" y="-985" width="1169" height="849" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038779238" />
+    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog" timestamp="1603142729715">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602966735905" />
+    <state x="656" y="-735" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603142729715" />
     <state x="656" y="-962" width="607" height="804" key="find.popup" timestamp="1602797850305">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -450,10 +456,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" width="672" height="677" key="run.anything.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602630235089" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1602972164509">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1603038299134">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1602972164509" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1603038299134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
